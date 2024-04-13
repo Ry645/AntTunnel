@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwavqro4vw2se"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_gw48f"]
+[ext_resource type="Script" path="res://player/playerCamera.gd" id="2_73c5k"]
+[ext_resource type="Texture2D" uid="uid://bmssehd11p2rv" path="res://player/crosshair.png" id="3_1asog"]
+[ext_resource type="Material" uid="uid://8tsmcmqc36d3" path="res://pixelateMask/pixelationShader1.tres" id="5_tf0w7"]
+[ext_resource type="PackedScene" path="res://pixelate_mask.tscn" id="17_abf7r"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xnxpb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_djkm6"]
+size = Vector3(0.5, 2, 0.5)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xbuqj"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_gw48f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_xnxpb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_djkm6")
+
+[node name="neck" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="neck"]
+unique_name_in_owner = true
+attributes = SubResource("CameraAttributesPractical_xbuqj")
+size = 39.728
+script = ExtResource("2_73c5k")
+
+[node name="TextureRect" type="TextureRect" parent="neck/Camera3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1asog")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="pixelateMask" parent="." instance=ExtResource("17_abf7r")]
+material = ExtResource("5_tf0w7")
+anchors_preset = 15
