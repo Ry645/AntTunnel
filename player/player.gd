@@ -2,7 +2,8 @@ extends CharacterBody3D
 
 class_name Player
 
-@export var SPEED:float = 5.0
+@export var SPEED:float = 3.0
+@export var SPRINT_FACTOR:float = 2.0
 @export var JUMP_VELOCITY:float = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -33,11 +34,8 @@ func _unhandled_input(event):
 	camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if !is_on_floor():
-		velocity.y -= gravity * delta
-
+func _physics_process(_delta):
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -65,7 +63,7 @@ func _physics_process(delta):
 func inputProcess(): # to be called in physics process
 	
 	if Input.is_action_just_pressed("sprint"):
-		SPEED *= 5.0
+		SPEED *= SPRINT_FACTOR
 	
 	if Input.is_action_just_released("sprint"):
-		SPEED /= 5.0
+		SPEED /= SPRINT_FACTOR
