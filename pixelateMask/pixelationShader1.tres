@@ -1,7 +1,0 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://8tsmcmqc36d3"]
-
-[ext_resource type="Shader" uid="uid://c7tjvetasyrm2" path="res://pixelateMask/pixelate1.tres" id="1_yxtpo"]
-
-[resource]
-shader = ExtResource("1_yxtpo")
-shader_parameter/Pixelization = 512.0

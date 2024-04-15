@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://8tsmcmqc36d3"]
+
+[ext_resource type="Shader" path="res://pixelateMask/pixelateAndPosterize.gdshader" id="1_57j1w"]
+
+[resource]
+shader = ExtResource("1_57j1w")
+shader_parameter/pixelization = 512.0
+shader_parameter/channelNumber = 56.0
