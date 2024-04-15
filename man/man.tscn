@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwuny7j5f6cfb"]
+
+[ext_resource type="QuadMesh" uid="uid://beikyttvb47dh" path="res://man/manHolder.tres" id="1_fb2by"]
+[ext_resource type="Material" uid="uid://cucy8maia7e7p" path="res://man/manMaterial.tres" id="1_vp40l"]
+
+[node name="man" type="MeshInstance3D"]
+mesh = ExtResource("1_fb2by")
+surface_material_override/0 = ExtResource("1_vp40l")

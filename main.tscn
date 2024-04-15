@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://wnr4sry5kwlu"]
+
+[ext_resource type="PackedScene" uid="uid://c2pwoijovvqe" path="res://blenderModels_AntTunnel/antMaze1.blend" id="1_b2gcx"]
+[ext_resource type="PackedScene" uid="uid://daiaeolk8hlnj" path="res://player/player.tscn" id="2_4ps5c"]
+[ext_resource type="PackedScene" uid="uid://dwuny7j5f6cfb" path="res://man/man.tscn" id="3_k3n35"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ciqon"]
+sky_top_color = Color(0.5, 0.396, 0.34, 1)
+sky_horizon_color = Color(0.646078, 0.655975, 0.670505, 1)
+ground_horizon_color = Color(0.646078, 0.655975, 0.670505, 1)
+
+[sub_resource type="Sky" id="Sky_8yynq"]
+sky_material = SubResource("ProceduralSkyMaterial_ciqon")
+
+[sub_resource type="Environment" id="Environment_xhvs3"]
+background_mode = 2
+sky = SubResource("Sky_8yynq")
+tonemap_mode = 2
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.2
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_emission = Color(0.03, 0.01605, 0.0114, 1)
+
+[node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xhvs3")
+
+[node name="antMaze1" parent="." instance=ExtResource("1_b2gcx")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_4ps5c")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0653219, 0.935255, 0.0610909)
+
+[node name="man" parent="." instance=ExtResource("3_k3n35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85051, 1.9967, 4.76262)
