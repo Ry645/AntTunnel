@@ -31,7 +31,7 @@ func _unhandled_input(event):
 			camera.rotate_x(-event.relative.y * 0.00125)
 			#neck separate from pivot point to account for moving forward and right without flying into the stratosphere
 	
-	camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
+	camera.rotation.x = clamp(camera.rotation.x, -PI/2+0.0000001, PI/2-0.0000001)
 
 
 func _physics_process(_delta):
