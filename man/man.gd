@@ -25,11 +25,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if playerNeck != null:
 		look_at(Vector3(playerNeck.global_position.x, global_position.y, playerNeck.global_position.z))
 		rotation.y += PI
-		print(global_rotation_degrees)
+		#print(global_rotation_degrees)
 
 func setPlayerNeck(neck):
 	playerNeck = neck
