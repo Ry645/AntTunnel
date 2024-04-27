@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt0gia7cm1au1"]
+
+[ext_resource type="PackedScene" uid="uid://c2pwoijovvqe" path="res://blenderModels_AntTunnel/antMaze1.blend" id="1_mbmi4"]
+
+[node name="antMaze1" instance=ExtResource("1_mbmi4")]
+
+[node name="CollisionShape3D" parent="mainMaze/StaticBody3D" index="0"]
+visible = false
