@@ -9,7 +9,3 @@ func _ready():
 	var itemNode = itemRes.scene.instantiate()
 	add_child(itemNode)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	print("vroom")

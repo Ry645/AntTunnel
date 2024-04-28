@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://evw47ittl8t3"]
+[gd_scene load_steps=2 format=3 uid="uid://evw47ittl8t3"]
+
+[ext_resource type="Script" path="res://itemScenesAndData/engine/engine.gd" id="1_jwrte"]
 
 [node name="engine" type="Node3D"]
+script = ExtResource("1_jwrte")
