@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://daiaeolk8hlnj"]
+[gd_scene load_steps=8 format=3 uid="uid://daiaeolk8hlnj"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gw48f"]
+[ext_resource type="PackedScene" uid="uid://csoeasokp3edn" path="res://rays/pickupRay/pickup_ray.tscn" id="3_yehp4"]
+[ext_resource type="PackedScene" uid="uid://bgjt8mac5rclw" path="res://inventory/inventory.tscn" id="4_ctdpl"]
 [ext_resource type="PackedScene" uid="uid://w4vtvhbd0nse" path="res://pixelateMask/pixelate_mask.tscn" id="4_pfkbw"]
 [ext_resource type="Shape3D" uid="uid://cch5we41l6ejk" path="res://player/playerCollision.tres" id="5_njuh6"]
 
@@ -27,4 +29,11 @@ unique_name_in_owner = true
 attributes = SubResource("CameraAttributesPractical_xbuqj")
 size = 39.728
 
+[node name="pickupRay" parent="neck/Camera3D" instance=ExtResource("3_yehp4")]
+unique_name_in_owner = true
+target_position = Vector3(0, 0, -5)
+
 [node name="pixelateMask" parent="." instance=ExtResource("4_pfkbw")]
+
+[node name="inventory" parent="." instance=ExtResource("4_ctdpl")]
+unique_name_in_owner = true

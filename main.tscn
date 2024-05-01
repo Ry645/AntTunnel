@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dwuny7j5f6cfb" path="res://man/man.tscn" id="3_k3n35"]
 [ext_resource type="PackedScene" uid="uid://bt0gia7cm1au1" path="res://antMaze/ant_maze_inherited.tscn" id="4_nb6xk"]
 [ext_resource type="PackedScene" uid="uid://dlj8swiapx12i" path="res://itemPickup/item_holder.tscn" id="5_ib5qc"]
-[ext_resource type="Resource" uid="uid://0evbhe202mti" path="res://itemResources/engine.tres" id="6_731lk"]
+[ext_resource type="Resource" uid="uid://cp3wiad3lgif4" path="res://itemResources/magnifyingGlass.tres" id="6_wjp5g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ciqon"]
 sky_top_color = Color(0.5, 0.396, 0.34, 1)
@@ -45,4 +45,12 @@ transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
 
 [node name="itemHolder" parent="." instance=ExtResource("5_ib5qc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33724, -1.43051e-06, -0.423736)
-itemRes = ExtResource("6_731lk")
+itemRes = ExtResource("6_wjp5g")
+
+[node name="itemHolder2" parent="." instance=ExtResource("5_ib5qc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33724, -1.43051e-06, 0.606631)
+itemRes = ExtResource("6_wjp5g")
+
+[node name="itemHolder3" parent="." instance=ExtResource("5_ib5qc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33724, -1.43051e-06, -2.22279)
+itemRes = ExtResource("6_wjp5g")

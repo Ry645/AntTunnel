@@ -7,5 +7,8 @@ class_name ItemHolder
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var itemNode = itemRes.scene.instantiate()
+	itemNode.itemHolder = self
 	add_child(itemNode)
 
+func deleteItem():
+	queue_free()
