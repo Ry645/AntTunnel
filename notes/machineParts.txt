@@ -1,0 +1,26 @@
+LORE: childhood objects
+
+CD player
+invisible ink marker
+magnifying glass
+handheld propeller
+marbles
+coil spinning top
+jumper cables
+DC motor
+
+
+
+player spins top,
+top spins cd player,
+cd player powers jumper cables,
+jumper cables power DC motor,
+DC motor spins propeller,
+propeller spins marbles on it,
+
+player turns on invisible ink marker light,
+magifying glass focuses light onto spinning marble propeller,
+light gets scattered by marble refraction and scares off the albino ants.
+
+if player is closing eyes, player is fine.
+if player has eyes open, large green dot get plastered on the player screen, like a laser eye injury
