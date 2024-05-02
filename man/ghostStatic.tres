@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cmtrucik2www5"]
+
+[ext_resource type="Shader" path="res://man/ghostStatic.gdshader" id="1_0tgs1"]
+[ext_resource type="Material" uid="uid://cucy8maia7e7p" path="res://man/manMaterial.tres" id="1_5ij3d"]
+[ext_resource type="Texture2D" uid="uid://bygwh4alfj02t" path="res://man/man.png" id="2_5vavj"]
+
+[resource]
+render_priority = 1
+next_pass = ExtResource("1_5ij3d")
+shader = ExtResource("1_0tgs1")
+shader_parameter/amount = 0.07
+shader_parameter/alphaThreshold = 522.32
+shader_parameter/alphaPrecision = 500.0
+shader_parameter/manTexture = ExtResource("2_5vavj")
