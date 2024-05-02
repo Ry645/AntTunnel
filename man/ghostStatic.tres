@@ -8,7 +8,7 @@
 render_priority = 1
 next_pass = ExtResource("1_5ij3d")
 shader = ExtResource("1_0tgs1")
-shader_parameter/amount = 0.07
-shader_parameter/alphaThreshold = 522.32
+shader_parameter/amount = 0.03
+shader_parameter/alphaThreshold = 490.0
 shader_parameter/alphaPrecision = 500.0
 shader_parameter/manTexture = ExtResource("2_5vavj")
