@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://daiaeolk8hlnj"]
+[gd_scene load_steps=9 format=3 uid="uid://daiaeolk8hlnj"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_gw48f"]
 [ext_resource type="PackedScene" uid="uid://csoeasokp3edn" path="res://rays/pickupRay/pickup_ray.tscn" id="3_yehp4"]
 [ext_resource type="PackedScene" uid="uid://bgjt8mac5rclw" path="res://inventory/inventory.tscn" id="4_ctdpl"]
 [ext_resource type="PackedScene" uid="uid://w4vtvhbd0nse" path="res://pixelateMask/pixelate_mask.tscn" id="4_pfkbw"]
 [ext_resource type="Shape3D" uid="uid://cch5we41l6ejk" path="res://player/playerCollision.tres" id="5_njuh6"]
+[ext_resource type="PackedScene" uid="uid://buky2hnu4a23s" path="res://arm/arm.tscn" id="6_h3e8t"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xnxpb"]
 
@@ -37,3 +38,5 @@ target_position = Vector3(0, 0, -5)
 
 [node name="inventory" parent="." instance=ExtResource("4_ctdpl")]
 unique_name_in_owner = true
+
+[node name="arm" parent="." instance=ExtResource("6_h3e8t")]
